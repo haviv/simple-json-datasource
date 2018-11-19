@@ -124,7 +124,7 @@ export class GenericDatasource {
   getTagKeys(options) {
     return new Promise((resolve, reject) => {
       this.doRequest({
-        url: this.url + '/tag-keys',
+        url: this.url + '/tag_keys',
         method: 'POST',
         data: options
       }).then(result => {
@@ -136,7 +136,7 @@ export class GenericDatasource {
   getTagValues(options) {
     return new Promise((resolve, reject) => {
       this.doRequest({
-        url: this.url + '/tag-values',
+        url: this.url + '/tag_values',
         method: 'POST',
         data: options
       }).then(result => {

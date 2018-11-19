@@ -10,9 +10,6 @@ Your backend needs to implement 4 urls:
  * `/search` used by the find metric options on the query tab in panels.
  * `/query` should return metrics based on input.
  * `/annotations` should return annotations.
- 
-Those two urls are optional:
-
  * `/tag-keys` should return tag keys for ad hoc filters.
  * `/tag-values` should return tag values for ad hoc filters.
 
@@ -56,11 +53,11 @@ Example `timeserie` request
      { "target": "upper_50", "refId": "A", "type": "timeserie" },
      { "target": "upper_75", "refId": "B", "type": "timeserie" }
   ],
-  "adhocFilters": [{
-    "key": "City",
+  "adhocFilters": [
+    "key": "City"
     "operator": "=",
     "value": "Berlin"
-  }],
+  ]
   "format": "json",
   "maxDataPoints": 550
 }
